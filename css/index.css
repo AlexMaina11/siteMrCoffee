@@ -1,0 +1,328 @@
+@import url("reset.css");
+
+ /* FORMATAÇÃO DAS LETRAS */
+
+.font-letras{
+  font-family: 'Times New Roman';
+}
+
+/* MENU */
+
+.menu {
+  background-image: url("../img/fundoTeste.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 980px;
+}
+
+ 
+ul {
+  display: flex;
+  align-items: center;
+}
+
+ul li:nth-child(1) {
+  margin-left: 25px;
+}
+
+ul li {
+  margin-right: 25px;
+}
+ 
+ul li a {
+  color: #777;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (min-width: 551px) {
+  .logoMob {
+    display: none;
+  }
+}
+
+@media (max-width:550px) {
+  .logoDesc {
+    display: none;
+  }
+  .menu {
+    background-image: none;
+    background-color: white;
+    padding-top: 10px;
+  }
+  .menu a {
+    color: 	#1C1C1C;
+    font-size: 20px;
+  }
+
+  ul li {
+    margin-right: 15px;
+  }
+}
+
+/* INFO  */
+.info {
+  font-size: 22px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-style: oblique;
+  font-weight: bold;
+  color: black;
+}
+
+.info span {
+  color: #777;
+}
+
+/* CADASTRO DO EMAIL */
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+.loginEmail input[type="email"] {
+  margin-top: 35px;
+  margin-left: 10%;
+  width: 65%;
+  height: 40px;
+  border: 1px solid #C0C0C0;
+  padding-left: 15px;
+}
+
+input[type="submit"] {
+  height: 40px;
+  width: 80px;
+  margin-left: 15px;
+  margin-top: 35px;
+  border-radius: 5px;
+  border: 1px solid #C0C0C0;
+
+}
+input[type="submit"]:hover {
+  background-color: #808080;
+  border: 1px solid #808080;
+  color: white;
+}
+
+.loginEmail form p {
+  display: none;
+}
+
+.loginEmail p {
+  margin-left: 15%;
+  color: #808080;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 550px ) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .loginEmail input[type="email"] {
+    margin-top: 35px;
+    margin-left: 5%;
+    width: 90%;
+    border: 1px solid #C0C0C0;
+  }
+
+  input[type="submit"] {
+    margin-left: 5%;
+    border-radius: 5px;
+    border: 1px solid #C0C0C0;
+    transform: translateY(-50px);
+  }
+
+  .loginEmail form p {
+    display: inline;
+  }
+
+  .loginEmail p {
+    display: none;
+  }
+
+}
+
+/* COMO FUNCIONA */
+.como-funciona-fundo {
+ background-color: #c4875c; 
+ transform: translateY(-16px);
+
+}
+
+.como-funciona {
+  color: white;
+  
+  margin-left: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;  
+  justify-content: space-around;
+}
+
+.como-funciona-item {
+  display: flex;
+  max-width: 290px;
+}
+
+
+.como-funciona-icon {
+  margin-right: 10px;
+  align-items: center;
+}
+
+.como-funciona-descricao {
+  max-width: 250px;
+}
+
+
+/* Produtos  */
+.produtos-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.produtos-section h3::after {
+  content: "-------";
+  color: #8B4513;
+}
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 30px auto;
+}
+
+.produtos-item {
+  position: relative;
+  padding: 30px 60px;
+
+  overflow: hidden; 
+  margin-bottom: 30px;
+  border: 1px solid transparent; 
+  
+}
+
+.produtos-item:hover {
+  border: 1px solid #8B4513;
+}
+
+.produtos-item a {
+  color: black;
+  text-decoration: none;
+}
+
+.produtos-item a p {
+  font-weight: bold;
+  font-size: 20px;
+  align-items: bottom;
+}
+
+.produtos-item a:hover {
+  color: #777;
+}
+ 
+/* Promoções */
+
+.promocao-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.promocao-section h3::after {
+  content: "-------";
+  color: #8B4513;
+}
+.promocao {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  justify-content: space-between;
+  margin: 30px 15%;
+}
+
+.promocao a {
+  color: black;
+  overflow: hidden; 
+  margin-bottom: 30px;
+  border: 1px solid transparent; 
+  padding: 15px
+}
+
+.promocao a:hover {
+  text-decoration: none;
+  border: 1px solid #8B4513;
+
+}
+
+.promocao .promocao-item {
+  display: flex;
+}
+
+.promocao .promocao-item .imagem img {
+  width: 100px;
+  height: 70px;
+}
+
+.promocao .promocao-item .texto {
+  margin-left: 5px;
+  text-align: left;
+}
+
+.promocao .promocao-item .texto h4 {
+  font-size: 20px;
+}
+
+.promocao .promocao-item .texto p .precoVelho {
+  font-size: 11px;
+  text-decoration: line-through;
+}
+
+.promocao .promocao-item .texto .precoNovo {
+  font-size: 15px;
+  background: #da8549;
+  padding: 2px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer ul .margin {
+
+  margin-left: 300px;
+}
+
+/* BARRA DE ROLAGEM */
+
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+
+
+
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}

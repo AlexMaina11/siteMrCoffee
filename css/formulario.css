@@ -1,0 +1,8 @@
+.body{
+  text-align: center;
+}
+.container {
+  max-width: 1000px;
+}
+
+.lh-condensed { line-height: 1.25; }

@@ -1,0 +1,14 @@
+form input {
+    border-radius: 5px;
+    border: 1px solid darkgray;
+    outline: none;
+    padding-left: 10px;
+    margin: 10px auto;
+}
+
+form input[type="file"] {
+    border: none;
+}
+
+
+

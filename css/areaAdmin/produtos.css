@@ -1,0 +1,60 @@
+.prod-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.prod {
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    margin: 5px 5px;
+    width: 250px;
+}
+
+.prod .prod-item {
+}
+
+.prod .prod-item img {
+    width: 100%;
+}
+
+.prod .prod-item h3 {
+    text-align: center;
+    margin: 4px 0;
+}
+
+.prod .prod-item p {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.prod .prod-item hr {
+    width: 200px;
+    margin: 0 30px;
+}
+
+.prod .prod-item small {
+    color: darkgray;
+    margin-left: 5px;
+}
+
+.prod .prod-item small::before {
+    content: "/";
+}
+
+.prod .prod-item a button{
+    border: 1px solid saddlebrown;
+    border-radius: 5px;
+    background: none;
+    margin: 0 0 10px 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: saddlebrown;
+    text-decoration: none;
+}
+
+.prod .prod-item a button:hover {
+    background: saddlebrown;
+    color: white;
+}

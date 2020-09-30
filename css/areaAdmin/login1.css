@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+}
+
+.formulario {
+    width: 100vw;
+    height: 100vh;
+    background: #6C7A89;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+form {
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    border-radius: 25px;
+}
+
+
+.formulario form img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 25px;
+    border-radius: 25px;
+}
+
+.formulario form h3 {
+    text-align: center;
+}
+
+.formulario form p {
+   margin: 50px 30px 0 50px;
+}
+
+.formulario form p + p {
+    margin-top: 10px;
+}
+
+.formulario form p input {
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+
+    outline: none;
+
+    color: darkgrey;
+    
+    padding-left: 10px;
+
+    width: 150px;
+}
+
+.formulario form button {
+    width: 250px;
+    height: 30px;
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+
+    margin: 50px 25px 25px 25px;
+
+    cursor: pointer;
+}
+
+.formulario form button:hover {
+    background-color: #ee1f1f;
+}
+
+.formulario form .txtErro {
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 0 0 20px 20px;
+}
+
+.formulario form .txtErro p {
+    margin-top: 5px;
+    max-width: 300px;
+}

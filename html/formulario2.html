@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../img/iconeSite.png" type="image/png">
+
+
+    <title>Checkout example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light">
+      <header>
+          <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark border-bottom shadow-sm">
+              <h5 class="my-0 mr-md-auto font-weight-normal text-white">Mr.Coffee</h5>
+              <nav class="my-2 my-md-0 mr-md-3">
+                  <a class="p-2 text-white" href="../index.php">Inicio</a>
+
+                <a class="p-2 text-white" href="carrinho.html">Carrinho</a>
+              </nav>
+              <a class="btn btn-outline-primary" href="login.html">Login</a>
+            </div>
+      </header>
+
+    <div class="container">
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">Endereço de cobrança</h4>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Nome completo</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  É necessário o primeiro nome válido.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="username">Nome de Usuario</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                </div>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Seu nome de usuário é obrigatório.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Email <span class="text-muted">(Obrigatório)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Digite um endereço de e-mail válido para atualizações de remessa.
+              </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="address2">Telefone:<span class="text-muted">(Obrigatório)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="(DDD)0000-0000">
+              </div> <br>
+
+
+            <hr class="mb-4">
+<!-- 
+            <h4 class="mb-3">Formas de pagamento:</h4>
+
+            <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                <label class="custom-control-label" for="credit">Cartão de crédito</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" for="debit">Cartão de débito</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" for="paypal">PayPal</label>
+              </div> -->
+
+              <!--- 
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name">Nome no cartão</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                <small class="text-muted">Nome completo como exibido no cartão</small>
+                <div class="invalid-feedback">
+                    O nome no cartão é obrigatório
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-number">Número do Cartão de Crédito</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                <div class="invalid-feedback">
+                    É necessário o número do cartão de crédito
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Expiração</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                <div class="invalid-feedback">
+                    Data de vencimento necessária
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-cvv">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                <div class="invalid-feedback">
+                    Código de segurança necessário
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Confirmar</button>
+          </form>
+        </div>
+      </div>
+      -->
+
+
+      <footer class="text-center text-small">
+          <p class="mb-1">Mr Coffee &copy; 2019-2020. Todos os direitos reservados. </p>
+          <ul class="list-inline">
+              <a href="index.html">Inicio</a> |
+              <a href="login.html">Entrar</a>
+              <a class="nav-link" href="sobre.html" target="blanck">Sobre</a>
+              <a href="https://www.facebook.com/Mr-Coffee-106831307390201/"><img src="../img/facebookicone.png" width="30" height="30" class="media-object  img-responsive img-thumbnail"></a>
+          </ul>
+        </footer>
+    </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  </body>
+</html>

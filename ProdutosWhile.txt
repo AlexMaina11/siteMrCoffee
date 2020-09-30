@@ -1,0 +1,10 @@
+                    <td><?php echo $row_usuario['cod_produto'] . "<br>"; ?></td> <br>
+                    <td><?php echo $row_usuario['nome_img'] . "<br>"; ?></td><br>
+                    <td><?php echo $row_usuario['nome'] . "<br>"; ?></td><br>
+                    <td><?php echo $row_usuario['preco'] . "<br>"; ?></td><br>
+                    <td><?php echo $row_usuario['tamanho'] . "<br>"; ?></td><br>
+                    <td><?php echo $row_usuario['descricao'] . "<br>"; ?></td><br>
+                    <td><?php echo $row_usuario['validade'] . "<br>"; ?></td><br>
+                    <img src="../../fotos/<?php echo $row_usuario['nome_img'] ?>" alt="" heigth="100" width="100"><br>
+
+                    <td><a class="botaoApagar"href="apagr_img.php?id=<?php print $row_usuario['id']; ?>">APAGAR</a></td>

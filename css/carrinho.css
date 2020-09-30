@@ -1,0 +1,159 @@
+div {
+    display: block;
+}
+ul li {
+    list-style: none;
+}
+
+.tabela {
+    margin-right: 15%;
+}
+
+
+.titulo-produto {
+    display: flex;
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.titulo-produto .produtos {
+    width: 44%;
+    padding-left: 10px;
+}
+
+.titulo-produto .quantidade {
+    width: 15%;
+}
+
+.titulo-produto .valorUnit {
+    width: 18%;    
+}
+
+.titulo-produto .valorTot {
+    width: 16%;
+
+}
+
+
+/* itens */
+
+.itens-list li {
+    display: flex;
+    min-height: 110px;
+}
+
+.itens-list .produtos {
+    width: 44%;
+    margin-top: 10px;
+    transform: translateX(-40px);
+    padding-left: 10px;
+    display: flex;
+    
+}
+
+.itens-list .produtos .info-itens {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.itens-list .produtos img {
+}
+
+.itens-list .produtos .info-itens .codigo span {
+    font-weight: bold;
+}
+
+.itens-list .produtos .info-itens .nome {
+    margin-top: -15px;
+}
+
+.itens-list .produtos .info-itens .nome span {
+    font-weight: bold;
+}
+
+.itens-list .quantidade {
+    margin-top: 10px;
+    padding-left: 10px;
+    width: 18%;
+}
+
+.itens-list .valorUnit {
+    margin-top: 10px;
+    padding-left: 19px;
+    width: 20%;    
+}
+
+.itens-list .valorTot {
+    margin-top: 10px;
+
+    width: 20%;
+}
+
+.itens-list .remover {
+    margin-top: 10px;
+}
+.itens-list .remover a button {
+    background-color: transparent;
+    border: 1px solid #da8549;
+    border-radius: 5px;
+    color: #da8549;
+    outline: none;
+}
+
+/* botao */
+
+.finalizarCom { 
+    padding: 10px 40px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid #da8549;
+    border-radius: 20px;
+    margin-left: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transform: translateX(-50%);
+
+}
+
+.finalizarCom:hover {
+    background: #da8549;
+    color: white;
+    transition: ease 0.5s;
+
+}
+
+
+
+/* CARRINHO VAZIO */ 
+.carrinhoVazioT {
+    display: flex;
+    align-items: center;
+}
+
+.carrinhoVazioT h1 {
+    color: #da8549;
+    margin-left: 50px;
+}
+
+.carrinhoVazio a {
+    margin-left: 30%;
+    transform: translateY(-40px);
+}
+
+.carrinhoVazio .carrinhoVazioT .carrinhoVarioTxt a button {
+    background-color: transparent;
+    border: 1px solid #da8549;
+    border-radius: 20px;
+    padding: 10px 40px;
+    margin-top: 25px;
+}
+
+.carrinhoVazio .carrinhoVazioT .carrinhoVarioTxt a button:hover {
+    background-color: #da8549;
+    outline: none;
+    cursor: pointer;
+    color: white;
+}

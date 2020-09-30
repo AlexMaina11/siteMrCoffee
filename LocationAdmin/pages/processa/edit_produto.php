@@ -1,9 +1,13 @@
 <?php
     session_start();
-    include_once("../connect-db/connection.php");
-    include_once("processa/verifica_login.php");
-?>
+    include_once("../../connect-db/connection.php");
+    include_once("verifica_login.php");
 
+    $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+    $result_usuario = "SELECT * FROM produtos WHERE cod_produto = '$id'";
+    $resultado_usuario = mysqli_query($conn, $result_usuario);
+    $row_usuario = mysqli_fetch_assoc($resultado_usuario);
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -12,21 +16,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="../../css/form.css">
+    <link rel="icon" href="../../img/icon/sistemPrivate.png">
 
-    <link rel="icon" href="../img/icon/sistemPrivate.png">
-
-    <title>Protudos cadastrados</title>
+    <title>Cadastrar produtos</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="../css/dashboard.css" rel="stylesheet">
-
-    <style>
-        @import url("../../css/areaAdmin/produtos.css");
-    </style>
+    <link href="../../css/dashboard.css" rel="stylesheet">
 </head>
 
 <body>
@@ -46,23 +46,23 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="../product.php">
                                 <span data-feather="shopping-cart"></span>
                                 Produtos
                             </a>
-                            <a class="nav-link" href="cadastro_produtos.php">
+                            <a class="nav-link" href="../cadastro_produtos.php">
                                 <span data-feather="shopping-cart"></span>
                                 Cad Produtos
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pedidos.php">
+                            <a class="nav-link" href="../pedidos.php">
                                 <span data-feather="shopping-cart"></span>
                                 Pedidos
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="client.php">
+                            <a class="nav-link" href="../client.php">
                                 <span data-feather="users"></span>
                                 Clientes
                             </a>
@@ -74,45 +74,42 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Products</h1>
-
+                    <h1 class="h2">Editar, <?php echo $row_usuario['nome'] . " / " . " ID: " . $row_usuario['cod_produto'] ?></h1>
                 </div>
-                <div class="table-responsive">
+                <div class="table-responsive">  
                     <?php
-                         if(isset($_SESSION['msg'])){
+                        if(isset($_SESSION['msg'])){
                             echo $_SESSION['msg'];
                             unset($_SESSION['msg']);
                         }
                     ?>
-                    <section class="prod-section">
-                        <?php
+                    <form action="proc_edit_produto.php" method="post" >
+                    <input type="hidden" name="id" value="<?php echo $row_usuario['cod_produto']; ?>">
 
-                       
+                        <p class="nome">Nome: 
+                            <input type="text" name="nome" id="nome" value="<?php echo $row_usuario['nome'] ?>">
+                            <select name="tipo" id="">
+                                <option value="<?php echo $row_usuario['tipo_prod'] ?>"><?php echo $row_usuario['tipo_prod'] ?></option>
+                                <option value="cafe">cafe</option>
+                                <option value="suco">suco</option>
+                                <option value="lanche">lanche</option>
+                            </select>
+                        </p><hr>
+                        <p class="descricao">Descrição: 
+                            <textarea name="descricao" id="descricao" cols="30" rows="2"><?php echo $row_usuario['descricao']; ?></textarea>
+                        </p><hr>
+                        <p class="preco">Preço:
+                            <input name="preco" id="preco" pattern="^\d*(\.\d{0,2})?$" value="<?php echo $row_usuario['preco']; ?>"/>                        
+                        </p><hr>
+                        <p class="tamanho">Litros/mililitro:
+                            <input type="text" name="tamanho" id="tamanho" value="<?php echo $row_usuario['tamanho']; ?>"> <span>Ex: 250ml</span>
+                        </p><hr>
 
-                        $sql = "SELECT *  FROM produtos";
-                        $sqls = mysqli_query($conn, $sql);
-                        while($row_usuario = mysqli_fetch_assoc($sqls)){
-                            ?>
-                        
-                            <div class="prod">
-                                <div class="prod-item">
-                                    <img src="../../fotos/<?php echo $row_usuario['nome_img'] ?>" alt=""  width="200">
-                                    <h3><?php echo utf8_encode($row_usuario['nome'])?></h3>
-                                    <p><?php echo utf8_encode($row_usuario['descricao']);?></p>
-                                    <hr>
-                                    <p><sup>R$</sup> <?php echo $row_usuario['preco']; ?><small><?php echo  $row_usuario['tamanho']; ?></small></p>
-                                    <a  href="processa/delete_produto.php?id=<?php print $row_usuario['cod_produto']; ?>"><button> Apagar</button></a>
-                                    <a  href="processa/edit_produto.php?id=<?php print $row_usuario['cod_produto']; ?>"><button> Editar</button></a>
-                                </div>
-                            </div>
-                    
-                        
 
-                        <?php
-                        }
-                        ?>  
-                     </section>
-                </div>   
+                        <input type="submit" value="Salvar">
+                    </form>
+
+                </div>
             </main>
         </div>
     </div>
